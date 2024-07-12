@@ -1,5 +1,9 @@
+:root {
+    --body-color: #eeefed; 
+}
+
 body {
-    background: #eeefed;
+    background: var(--body-color);
 }
 
 a {
@@ -47,7 +51,7 @@ p {
     border-radius: 5px;
     font-family: 'Lato', sans-serif;
     font-weight: 500;
-    background: inherit;
+    background: var(--body-color);
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
