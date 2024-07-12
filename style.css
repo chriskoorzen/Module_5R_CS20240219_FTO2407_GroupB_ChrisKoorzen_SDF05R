@@ -32,8 +32,9 @@ p {
 }
 
 .custom-btn {
-    width: 130px;
-    height: 40px;
+    width: 260px;   /* Double size for better showcasing effects */
+    height: 80px;
+
     color: #000;
     border-radius: 5px;
     padding: 10px 25px;
