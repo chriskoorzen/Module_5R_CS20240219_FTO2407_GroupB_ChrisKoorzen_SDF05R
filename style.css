@@ -58,4 +58,11 @@ p {
 
 .btn-2 {}
 
+#mouse, #cat1, #cat2 {
+    display: inline-block;
+    position: absolute;
+    z-index: -1;
+}
+
+
 .btn-3 {}
