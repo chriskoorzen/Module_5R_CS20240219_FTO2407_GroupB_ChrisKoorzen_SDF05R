@@ -64,31 +64,19 @@ p {
 .btn-1 {}
 
 
-/* CAT HUNT */
-@keyframes mouse-peek {
+/* POINTING ARROW */
+@keyframes pointing {
     0%  {left: -10px;}
     50% {right: -10px;}
 }
 
-#mouse, #cat1, #cat2 {
-    display: block;
-    position: absolute;
-    z-index: 1;
-}
-
-#mouse {
-    right: -10px;
-}
-
-#mouse:hover, #cat-box:hover {
-    animation-name: mouse-peek;
+.btn-2:hover {
+    animation-name: pointing;
     animation-duration: 1s;
     animation-iteration-count: infinite;
 }
 
-.btn-2 {
-    position: absolute !important;
-}
+.btn-2 {}
 
 
 .btn-3 {}
