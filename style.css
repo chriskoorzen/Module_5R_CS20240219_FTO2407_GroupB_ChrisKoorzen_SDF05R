@@ -31,25 +31,28 @@ p {
     margin-bottom: 40px;
 }
 
-.custom-btn {
+.custom-btn, #cat-box {
     width: 260px;   /* Double size for better showcasing effects */
     height: 80px;
 
+    padding: 10px 25px;
+    position: relative;
+    display: block;
+    margin: 0 auto 20px; /* Center and add margin to stack vertically */
+    outline: none;
+}
+
+.custom-btn {
     color: #000;
     border-radius: 5px;
-    padding: 10px 25px;
     font-family: 'Lato', sans-serif;
     font-weight: 500;
     background: inherit;
     cursor: pointer;
     transition: all 0.3s ease;
-    position: relative;
-    display: block;
-    margin: 0 auto 20px; /* Center and add margin to stack vertically */
     box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
         7px 7px 20px 0px rgba(0, 0, 0, .1),
         4px 4px 5px 0px rgba(0, 0, 0, .1);
-    outline: none;
 }
 
 /* Add your custom styles for btn-1, btn-2, and btn-3 */
