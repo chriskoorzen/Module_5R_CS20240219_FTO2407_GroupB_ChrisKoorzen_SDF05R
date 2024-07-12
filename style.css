@@ -63,12 +63,31 @@ p {
 
 .btn-1 {}
 
-.btn-2 {}
+
+/* CAT HUNT */
+@keyframes mouse-peek {
+    0%  {left: -10px;}
+    50% {right: -10px;}
+}
 
 #mouse, #cat1, #cat2 {
-    display: inline-block;
+    display: block;
     position: absolute;
-    z-index: -1;
+    z-index: 1;
+}
+
+#mouse {
+    right: -10px;
+}
+
+#mouse:hover, #cat-box:hover {
+    animation-name: mouse-peek;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+.btn-2 {
+    position: absolute !important;
 }
 
 
