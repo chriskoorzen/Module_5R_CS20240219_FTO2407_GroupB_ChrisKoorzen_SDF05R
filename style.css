@@ -63,17 +63,44 @@ p {
 
 /* POINTING ARROW */
 @keyframes pointing {
-    0%  {left: -10px;}
-    50% {right: -10px;}
+    0%  {right: -5px;}
+    25% {right: -10px;}
+    50% {right: -15px;}
+    75% {right: -20px;}
 }
 
 .btn-2:hover {
     animation-name: pointing;
-    animation-duration: 1s;
+    animation-duration: 800ms;
     animation-iteration-count: infinite;
+    animation-delay: 700ms;
 }
 
-.btn-2 {}
+.btn-2 span {
+    position: relative;     /* Set positioning to allow position specification */
+    transition: 500ms;      /* Both span and span:after needs transition set independantly */
+}
+
+.btn-2 span:after {         /* Insert content "after" element */
+    content: '\00bb';       /* Double Arrow */
+    position: absolute;     /* Allow positioning */
+    opacity: 0;             /* "Hide" in default state */
+    right: -20px;           /* Position away from text */
+    transition: 500ms;      /* Allow graceful return to normal */
+}
+
+.btn-2:hover span {
+    padding-right: 20px;    /* Push button text and content to the left to simulate "fade-in" look */
+}
+  
+.btn-2:hover span:after {
+    opacity: 1;             /* Make visible on hover */
+    right: -5px;            /* Offset left push slightly to simulate a 'fade-in' look */
+}
+
+.btn-2 {
+
+}
 
 
 .btn-3 {}
