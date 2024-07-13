@@ -63,15 +63,23 @@ p {
 
 /* POINTING ARROW */
 @keyframes pointing {
-    0%  {right: -5px;}
-    25% {right: -10px;}
-    50% {right: -15px;}
-    75% {right: -20px;}
+    0%   {right: -4px;}
+    9%   {right: -8px;}
+    18%  {right: -12px;}
+    27%  {right: -8px;}
+    36%  {right: -4px;}
+    45%  {right: 0px;}
+    54%  {right: 4px;}
+    63%  {right: 8px;}
+    72%  {right: 12px;}
+    81%  {right: 8px;}
+    90%  {right: 4px;}
+    99%  {right: 0px;}
 }
 
 .btn-2:hover {
     animation-name: pointing;
-    animation-duration: 800ms;
+    animation-duration: 1s;
     animation-iteration-count: infinite;
     animation-delay: 700ms;
 }
@@ -85,7 +93,7 @@ p {
     content: '\00bb';       /* Double Arrow */
     position: absolute;     /* Allow positioning */
     opacity: 0;             /* "Hide" in default state */
-    right: -20px;           /* Position away from text */
+    right: -20px;           /* Position away from span text */
     transition: 500ms;      /* Allow graceful return to normal */
 }
 
@@ -95,7 +103,7 @@ p {
   
 .btn-2:hover span:after {
     opacity: 1;             /* Make visible on hover */
-    right: -5px;            /* Offset left push slightly to simulate a 'fade-in' look */
+    right: -5px;            /* Offset content left push slightly to simulate a 'fade-in' look */
 }
 
 .btn-2 {
