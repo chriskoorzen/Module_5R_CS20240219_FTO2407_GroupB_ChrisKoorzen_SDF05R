@@ -89,7 +89,7 @@ p {
 
 .btn-1:active {
     animation-name: pulse;
-    animation-duration: 400ms;
+    animation-duration: 450ms;
     animation-timing-function: linear;      /* Keep the animation frame speed constant */
     animation-iteration-count: infinite;    /* Must happen on every click */
 }
