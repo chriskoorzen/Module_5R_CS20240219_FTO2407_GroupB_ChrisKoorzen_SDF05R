@@ -54,7 +54,7 @@ p {
 
 /* Add your custom styles for btn-1, btn-2, and btn-3 */
 
-/* RIPPLE EFFECT */
+/* RIPPLE AND PULSE EFFECT */
 @keyframes ripple {
     0%     {background-image: repeating-radial-gradient(#a2a8d3, #38598b 10%, #113f67 20%)}
     12.5%  {background-image: repeating-radial-gradient(#a2a8d3, #38598b 10%, #113f67 30%)}
@@ -64,6 +64,14 @@ p {
     62.5%  {background-image: repeating-radial-gradient(#a2a8d3, #38598b 10%, #113f67 70%)}
     75%    {background-image: repeating-radial-gradient(#a2a8d3, #38598b 10%, #113f67 80%)}
     87.5%  {background-image: repeating-radial-gradient(#a2a8d3, #38598b 10%, #113f67 90%)}
+    /* 100% not necessary - is the same as default state (when animation moves "forward") */
+}
+
+@keyframes pulse {
+    0%   {background-image: repeating-radial-gradient(#a2a8d3, #38598b 10%, #113f67 60%)}
+    25%  {background-image: repeating-radial-gradient(#a2a8d3, #38598b 10%, #113f67 70%)}
+    50%  {background-image: repeating-radial-gradient(#a2a8d3, #38598b 10%, #113f67 80%)}
+    75%  {background-image: repeating-radial-gradient(#a2a8d3, #38598b 10%, #113f67 90%)}
     /* 100% not necessary - is the same as default state (when animation moves "forward") */
 }
 
@@ -77,6 +85,13 @@ p {
     animation-duration: 700ms;
     animation-timing-function: linear;      /* Keep the animation frame speed constant */
     animation-iteration-count: 1;           /* Default is 1, but cannot hurt to be explicit */
+}
+
+.btn-1:active {
+    animation-name: pulse;
+    animation-duration: 400ms;
+    animation-timing-function: linear;      /* Keep the animation frame speed constant */
+    animation-iteration-count: infinite;    /* Must happen on every click */
 }
 
 
