@@ -1,3 +1,8 @@
+:root {
+    --btn-width: 260px;                 /* Double size for better showcasing effects */
+    --btn-height: 80px;
+}
+
 body {
     background: #eeefed;
 }
@@ -32,9 +37,6 @@ p {
 }
 
 .custom-btn {
-    width: 260px;   /* Double size for better showcasing effects */
-    height: 80px;
-
     color: #000;
     border-radius: 5px;
     padding: 10px 25px;
@@ -43,13 +45,20 @@ p {
     background: transparent;
     cursor: pointer;
     transition: all 0.3s ease;
-    position: relative;
+    
     display: block;
-    margin: 0 auto 20px; /* Center and add margin to stack vertically */
+    
     box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
         7px 7px 20px 0px rgba(0, 0, 0, .1),
         4px 4px 5px 0px rgba(0, 0, 0, .1);
     outline: none;
+}
+
+.center-and-size {
+    width: var(--btn-width);
+    height: var(--btn-height);
+    position: relative;
+    margin: 0 auto 20px;                                /* Center and add margin to stack vertically */
 }
 
 /* Add your custom styles for btn-1, btn-2, and btn-3 */
@@ -61,25 +70,21 @@ p {
 
 /* DANGER DOOR */
 .danger-door {
-    width: 260px;               /* Same as custom-btn declaration */ /* TODO make utility class */
-    height: 80px;
-    position: relative;
-    margin: 0 auto 20px;
     transition: width 1.5s;
     transition-delay: 700ms;
     transition-timing-function: ease-in;
 }
 
 .danger-door:hover {
-    width: 540px;               /* Double + a little extra */
+    width: calc((var(--btn-width) * 2) + 20px);         /* Double + a little extra */
 }
 
 #left-danger-door, #right-danger-door {
     position: absolute;
     height: inherit;
-    width: calc(260px / 2);     /* References custom-btn declaration */
+    width: calc(var(--btn-width) / 2);
     background-image: url("images/vecteezy_grunge-danger-caution-background_155103.jpg"); /* Image credit: https://www.vecteezy.com/free-vector/warning-stripes */
-    background-size: 130px 40px;
+    background-size: calc(var(--btn-width) / 2) calc(var(--btn-height) / 2);
     border: 3px solid black;
     border-radius: 3px;
     padding-top: 5px;
