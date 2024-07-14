@@ -1,9 +1,5 @@
-:root {
-    --body-color: #eeefed; 
-}
-
 body {
-    background: var(--body-color);
+    background: #eeefed;
 }
 
 a {
