@@ -73,6 +73,8 @@ p {
     transition: width 1.5s;
     transition-delay: 700ms;
     transition-timing-function: ease-in;
+    background-color: #000;
+    padding-bottom: 12px;
 }
 
 .danger-door:hover {
@@ -87,19 +89,27 @@ p {
     background-size: calc(var(--btn-width) / 2) calc(var(--btn-height) / 2);
     border: 3px solid black;
     border-radius: 3px;
-    padding-top: 5px;
+    padding-top: 6px;
 }
 
 #left-danger-door {
     top: 0px;
     left: 0px;
+    border-right: none;
 }
 #right-danger-door {
     top: 0px;
     right: 0px;
+    border-left: none;
 }
 
 .btn-3 {
     position: relative;
-    margin: auto;
+    top: 5px;
+    border-radius: 300px;
+    background-color: rgb(204, 8, 8);
+    color: beige;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
 }
