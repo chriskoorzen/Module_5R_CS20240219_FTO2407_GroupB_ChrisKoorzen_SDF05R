@@ -58,4 +58,43 @@ p {
 
 .btn-2 {}
 
-.btn-3 {}
+
+/* DANGER DOOR */
+.danger-door {
+    width: 260px;               /* Same as custom-btn declaration */ /* TODO make utility class */
+    height: 80px;
+    position: relative;
+    margin: 0 auto 20px;
+    transition: width 1.5s;
+    transition-delay: 700ms;
+    transition-timing-function: ease-in;
+}
+
+.danger-door:hover {
+    width: 540px;               /* Double + a little extra */
+}
+
+#left-danger-door, #right-danger-door {
+    position: absolute;
+    height: inherit;
+    width: calc(260px / 2);     /* References custom-btn declaration */
+    background-image: url("images/vecteezy_grunge-danger-caution-background_155103.jpg"); /* Image credit: https://www.vecteezy.com/free-vector/warning-stripes */
+    background-size: 130px 40px;
+    border: 3px solid black;
+    border-radius: 3px;
+    padding-top: 5px;
+}
+
+#left-danger-door {
+    top: 0px;
+    left: 0px;
+}
+#right-danger-door {
+    top: 0px;
+    right: 0px;
+}
+
+.btn-3 {
+    position: relative;
+    margin: auto;
+}
