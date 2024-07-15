@@ -54,7 +54,6 @@ p {
 
 /* Add your custom styles for btn-1, btn-2, and btn-3 */
 
-
 /* RIPPLE AND PULSE EFFECT */
 @keyframes ripple {
     0%     {background-image: repeating-radial-gradient(#a2a8d3, #38598b 10%, #113f67 20%)}
@@ -97,7 +96,63 @@ p {
 }
 
 
-/* */
-.btn-2 {}
+/* POINTING ARROW */
+@keyframes pointing {
+    0%   {right: 3px;}
+    11%   {right: 0px;}
+    22%  {right: -3px;}
+    33%  {right: -6px;}
+    44%  {right: -9px;}
+    55%  {right: -12px;}
+    66%  {right: -9px;}
+    77%  {right: -6px;}
+    88%  {right: -3px;}
+    99%  {right: 0px;}
+}
 
+.btn-2 {
+    background-color: orangered;
+    font-size: 12px;
+    font-weight: 800;
+    color: antiquewhite;
+}
+
+.btn-2:hover {
+    animation-name: pointing;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    animation-delay: 400ms;
+}
+
+.btn-2 span {
+    position: relative;     /* Set positioning to allow position specification */
+    transition: 500ms;      /* Both span and span:after needs transition set independantly */
+}
+
+.btn-2 span::after {        /* Insert content "after" element */
+    content: '\00bb';       /* Double Arrow */
+    position: absolute;     /* Allow positioning */
+    opacity: 0;             /* "Hide" in default state */
+    right: -18px;           /* Position away from span text */
+    transition: 500ms;      /* Allow graceful return to normal */
+    font-size: 20px;
+    top: -8px;
+}
+
+.btn-2:hover span {
+    padding-right: 18px;    /* Push button text and content to the left to simulate "fade-in" look */
+}
+  
+.btn-2:hover span::after {
+    opacity: 1;             /* Make visible on hover */
+    right: -5px;            /* Offset content left push slightly to simulate a 'fade-in' look */
+}
+
+.btn-2:active span::after {
+    right: -25px;
+    transition: 80ms;
+    opacity: 0.7;
+}
+
+/* */
 .btn-3 {}
