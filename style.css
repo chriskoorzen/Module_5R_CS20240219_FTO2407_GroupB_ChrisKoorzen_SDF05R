@@ -92,6 +92,7 @@ p {
     animation-duration: 450ms;
     animation-timing-function: linear;      /* Keep the animation frame speed constant */
     animation-iteration-count: infinite;    /* Must happen on every click */
+    top: 2px;                               /* Move button down slightly for click down effect */
 }
 
 
