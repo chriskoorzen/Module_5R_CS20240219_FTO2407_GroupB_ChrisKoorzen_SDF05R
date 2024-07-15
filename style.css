@@ -1,5 +1,5 @@
 :root {
-    --btn-width: 130px;                 /* Double size for better showcasing effects */
+    --btn-width: 130px;
     --btn-height: 40px;
 }
 
@@ -58,7 +58,7 @@ p {
     width: var(--btn-width);
     height: var(--btn-height);
     position: relative;
-    margin: 0 auto 20px;                                /* Center and add margin to stack vertically */
+    margin: 0 auto 20px;                    /* Center and add margin to stack vertically */
 }
 
 /* Add your custom styles for btn-1, btn-2, and btn-3 */
@@ -134,27 +134,27 @@ p {
 }
 
 .btn-2 span {
-    position: relative;     /* Set positioning to allow position specification */
-    transition: 500ms;      /* Both span and span:after needs transition set independantly */
+    position: relative;                     /* Set positioning to allow position specification */
+    transition: 500ms;                      /* Both span and span:after needs transition set independantly */
 }
 
-.btn-2 span::after {        /* Insert content "after" element */
-    content: '\00bb';       /* Double Arrow */
-    position: absolute;     /* Allow positioning */
-    opacity: 0;             /* "Hide" in default state */
-    right: -18px;           /* Position away from span text */
-    transition: 500ms;      /* Allow graceful return to normal */
+.btn-2 span::after {                        /* Insert content "after" element */
+    content: '\00bb';                       /* Double Arrow */
+    position: absolute;                     /* Allow positioning */
+    opacity: 0;                             /* "Hide" in default state */
+    right: -18px;                           /* Position away from span text */
+    transition: 500ms;                      /* Allow graceful return to normal */
     font-size: 20px;
     top: -8px;
 }
 
 .btn-2:hover span {
-    padding-right: 18px;    /* Push button text and content to the left to simulate "fade-in" look */
+    padding-right: 18px;                    /* Push button text and content to the left to simulate "fade-in" look */
 }
   
 .btn-2:hover span::after {
-    opacity: 1;             /* Make visible on hover */
-    right: -5px;            /* Offset content left push slightly to simulate a 'fade-in' look */
+    opacity: 1;                             /* Make visible on hover */
+    right: -5px;                            /* Offset content left push slightly to simulate a 'fade-in' look */
 }
 
 .btn-2:active span::after {
