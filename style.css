@@ -32,8 +32,8 @@ p {
 }
 
 .custom-btn {
-    width: 260px;   /* Double size for better showcasing effects */
-    height: 80px;
+    width: 130px;   /* Double size for better showcasing effects */
+    height: 40px;
 
     color: #000;
     border-radius: 5px;
@@ -59,17 +59,15 @@ p {
 
 /* POINTING ARROW */
 @keyframes pointing {
-    0%   {right: -4px;}
-    9%   {right: -8px;}
-    18%  {right: -12px;}
-    27%  {right: -8px;}
-    36%  {right: -4px;}
-    45%  {right: 0px;}
-    54%  {right: 4px;}
-    63%  {right: 8px;}
-    72%  {right: 12px;}
-    81%  {right: 8px;}
-    90%  {right: 4px;}
+    0%   {right: 3px;}
+    11%   {right: 0px;}
+    22%  {right: -3px;}
+    33%  {right: -6px;}
+    44%  {right: -9px;}
+    55%  {right: -12px;}
+    66%  {right: -9px;}
+    77%  {right: -6px;}
+    88%  {right: -3px;}
     99%  {right: 0px;}
 }
 
