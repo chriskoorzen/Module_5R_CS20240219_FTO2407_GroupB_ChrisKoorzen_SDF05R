@@ -22,16 +22,22 @@ Get ready to create animated buttons using CSS! This project focuses on creating
     - Hidden behind a "safety door". The user cannot activate the button while the "door" is closed.
     - On hover, the "door" will slowly start to open, revealing the button inside. Only now may the user access the button.
     - On click, the button disappears briefly and flashes across the screen, indicating the seriousness of the action.
+    - When the user removes their cursor, the "safety doors" close up again.
+4. **General**
+    - To keep things simple I did not fiddle with many of the original button properties such as size, border, shadow etc.
+    - Also kept many unused declarations from original project code (such as _a_ and _.logo_).
+    - Refactored some properties into utility classes for reusability.
+    - Made use of variable declarations to keep settings confined to a single place, and keep ratio relationships constant.
 
 ## Challenges
 
 **Button 1:** Understanding the transformations of the _radial-gradient_ function. Took a while before I found the correct settings to simulate a waterdrop. It has some room for improvement still - there is a pixelated sharpness to the ripples that I struggle to get rid of.
 
-**Button 2:** Originally wanted to create a "cat and mouse hunt" button, where on hover a little mouse (emoji) would "peek" its head from behind, and on click, would "release" cats (emojis) starting a "chase" within the button's parent div. Discovered that CSS animations can only be applied to and affects only the specified element: you can only change the elements' CSS properties you trigger (no JS allowed for this project). Granted, it may still be possible to implement this original idea, but would involve some serious "acrobatics" with nested elements. Simply do not have the time. Pivoted to something simpler but still challenging: this button uses transitions and animations, and makes good use of the _::after_ pseudo-element.
+**Button 2:** Originally wanted to create a "cat and mouse hunt" button, where on hover a little mouse (emoji) would "peek" its head from behind, and on click (held down), would "release" cats (emojis) starting a "chase" within the button's parent div. Discovered that CSS animations can only be applied to and affects only the specified element: you can only change the elements' CSS properties you trigger, not use that to trigger a different element (possible with JS, but not allowed for this project). Granted, it may still be possible to implement this original idea, but would involve some serious "acrobatics" with nested elements. Simply do not have the time. Pivoted to something simpler but still challenging: this button uses transitions and animations, and makes good use of the _::after_ pseudo-element.
 
 **Button 3:** Simpler than it seems. The parent div simply widens on hover, and the 2 last child elements (the "doors") are anchored on either side. The mix of absolute and relative positioning was crucial for this one, as the button had to stay in place while the images moved out of the way. Initially thought I had to fiddle with z-indexes, but HTML ordering (and stacking) proved sufficient to complete the design.
 
-**Git:** To improve upon my git skills, I decided to develop each button in its own branch concurrently, and merge the final products back into the main branch. A ton of fun. Learned quite a lot. Had to deal with merge conflicts each time, and even had to rebase the original main, as the remote origin url was changed and its main branch updated since I started working on the project. Now comfortable with commands such as _reset --hard_, _pull --rebase_, _remote_, _commit --amend_ and _merge_. Granted, the main tree might not be squeaky clean, but nothing's lost or broken! Made a habit of backing up the repo before running serious commands.
+**Git:** To improve upon my git CLI skills, I decided to develop each button in its own branch concurrently, and merge the final products back into the main branch. A ton of fun. Learned quite a lot. Had to deal with merge conflicts each time, and even had to rebase the original main, as the remote origin url was changed and its main branch updated since I started working on the project. Now comfortable with commands such as _reset --hard_, _pull --rebase_, _remote add_, _commit --amend_ and _merge_. Although the main tree is not squeaky clean (two commits appear twice), nothing's lost or broken! Made a habit of backing up the repo before running serious commands.
 
 ## Inspirations
 **Button 1:** Curiosity about CSS3 functions and SDF04's checkered background.
