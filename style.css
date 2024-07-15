@@ -73,6 +73,13 @@ p {
     99%  {right: 0px;}
 }
 
+.btn-2 {
+    background-color: orangered;
+    font-size: 12px;
+    font-weight: 800;
+    color: antiquewhite;
+}
+
 .btn-2:hover {
     animation-name: pointing;
     animation-duration: 1s;
@@ -85,26 +92,24 @@ p {
     transition: 500ms;      /* Both span and span:after needs transition set independantly */
 }
 
-.btn-2 span:after {         /* Insert content "after" element */
+.btn-2 span::after {        /* Insert content "after" element */
     content: '\00bb';       /* Double Arrow */
     position: absolute;     /* Allow positioning */
     opacity: 0;             /* "Hide" in default state */
-    right: -20px;           /* Position away from span text */
+    right: -18px;           /* Position away from span text */
     transition: 500ms;      /* Allow graceful return to normal */
+    font-size: 20px;
+    top: -8px;
 }
 
 .btn-2:hover span {
-    padding-right: 20px;    /* Push button text and content to the left to simulate "fade-in" look */
+    padding-right: 18px;    /* Push button text and content to the left to simulate "fade-in" look */
 }
   
-.btn-2:hover span:after {
+.btn-2:hover span::after {
     opacity: 1;             /* Make visible on hover */
     right: -5px;            /* Offset content left push slightly to simulate a 'fade-in' look */
 }
 
-.btn-2 {
-
-}
-
-
+/* */
 .btn-3 {}
