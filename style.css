@@ -1,3 +1,8 @@
+:root {
+    --btn-width: 130px;                 /* Double size for better showcasing effects */
+    --btn-height: 40px;
+}
+
 body {
     background: #eeefed;
 }
@@ -32,9 +37,6 @@ p {
 }
 
 .custom-btn {
-    width: 260px;   /* Double size for better showcasing effects */
-    height: 80px;
-
     color: #000;
     border-radius: 5px;
     padding: 10px 25px;
@@ -43,13 +45,20 @@ p {
     background: transparent;
     cursor: pointer;
     transition: all 0.3s ease;
-    position: relative;
+    
     display: block;
-    margin: 0 auto 20px; /* Center and add margin to stack vertically */
+    
     box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
         7px 7px 20px 0px rgba(0, 0, 0, .1),
         4px 4px 5px 0px rgba(0, 0, 0, .1);
     outline: none;
+}
+
+.center-and-size {
+    width: var(--btn-width);
+    height: var(--btn-height);
+    position: relative;
+    margin: 0 auto 20px;                                /* Center and add margin to stack vertically */
 }
 
 /* Add your custom styles for btn-1, btn-2, and btn-3 */
@@ -154,5 +163,65 @@ p {
     opacity: 0.7;
 }
 
-/* */
-.btn-3 {}
+
+/* DANGER DOOR */
+.danger-door {
+    transition: width 1.5s;
+    transition-delay: 700ms;
+    transition-timing-function: ease-in;
+    background-color: #000;
+    padding-bottom: 12px;
+    border-radius: 4px;
+}
+
+.danger-door:hover {
+    width: calc((var(--btn-width) * 2) + 20px);         /* Double + a little extra */
+}
+
+#left-danger-door, #right-danger-door {
+    position: absolute;
+    height: inherit;
+    width: calc((var(--btn-width) / 2) - 3px);
+    background-image: url("images/vecteezy_grunge-danger-caution-background_155103.jpg"); /* Image credit: https://www.vecteezy.com/free-vector/warning-stripes */
+    background-size: calc(var(--btn-width) / 2) calc(var(--btn-height));
+    border: 3px solid black;
+    border-radius: 4px;
+    padding-top: 6px;
+}
+
+#left-danger-door {
+    top: 0px;
+    left: 0px;
+    border-right: none;
+}
+#right-danger-door {
+    top: 0px;
+    right: 0px;
+    border-left: none;
+}
+
+.btn-3 {
+    position: relative;
+    top: 5px;
+    border-radius: 300px;
+    background-color: rgb(204, 8, 8);
+    color: beige;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0 0 8px #eeefed;
+}
+
+@keyframes launch {
+    0%   {transform: scale(4) rotate(45deg); opacity: 0;}
+    25%  {transform: scale(8) rotate(45deg); opacity: 0.3; }
+    50%  {transform: scale(16) rotate(45deg); opacity: 0.6; }
+    75%  {transform: scale(32) rotate(45deg); opacity: 0.3; }
+    100% {transform: scale(64) rotate(45deg); opacity: 0.1; }
+}
+
+.btn-3:active {
+    animation: launch;
+    animation-duration: 120ms;
+    animation-timing-function: ease-out;
+}
