@@ -1,6 +1,6 @@
 :root {
-    --btn-width: 260px;                 /* Double size for better showcasing effects */
-    --btn-height: 80px;
+    --btn-width: 130px;                 /* Double size for better showcasing effects */
+    --btn-height: 40px;
 }
 
 body {
@@ -113,4 +113,19 @@ p {
     font-size: 14px;
     font-weight: bold;
     text-align: center;
+    text-shadow: 0 0 8px #eeefed;
+}
+
+@keyframes launch {
+    0%   {transform: scale(4) rotate(45deg); opacity: 0;}
+    25%  {transform: scale(8) rotate(45deg); opacity: 0.3; }
+    50%  {transform: scale(16) rotate(45deg); opacity: 0.6; }
+    75%  {transform: scale(32) rotate(45deg); opacity: 0.3; }
+    100% {transform: scale(64) rotate(45deg); opacity: 0.1; }
+}
+
+.btn-3:active {
+    animation: launch;
+    animation-duration: 120ms;
+    animation-timing-function: ease-out;
 }
