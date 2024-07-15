@@ -75,6 +75,7 @@ p {
     transition-timing-function: ease-in;
     background-color: #000;
     padding-bottom: 12px;
+    border-radius: 4px;
 }
 
 .danger-door:hover {
@@ -84,11 +85,11 @@ p {
 #left-danger-door, #right-danger-door {
     position: absolute;
     height: inherit;
-    width: calc(var(--btn-width) / 2);
+    width: calc((var(--btn-width) / 2) - 3px);
     background-image: url("images/vecteezy_grunge-danger-caution-background_155103.jpg"); /* Image credit: https://www.vecteezy.com/free-vector/warning-stripes */
-    background-size: calc(var(--btn-width) / 2) calc(var(--btn-height) / 2);
+    background-size: calc(var(--btn-width) / 2) calc(var(--btn-height));
     border: 3px solid black;
-    border-radius: 3px;
+    border-radius: 4px;
     padding-top: 6px;
 }
 
